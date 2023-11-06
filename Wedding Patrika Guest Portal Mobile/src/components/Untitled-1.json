@@ -1,0 +1,203 @@
+[
+    {
+        "docId": "65469b6acd9a9662437163a2",
+        "category": "Invitation",
+        "status": false,
+        "docData": {
+            "_id": "65469b6acd9a9662437163a2",
+            "eventId": "654698d8cd9a966243716374",
+            "title": "Invitation",
+            "titleBg": "1699125730882-@-home_invitation.jpg",
+            "invitationImgs": [
+                "1699126027269-@-inviter_1.jpg",
+                "1699126045332-@-inviter_2.jpg",
+                "1699126104623-@-inviter_3.jpg"
+            ],
+            "__v": 0
+        },
+        "_id": "654698f3cd9a96624371637a"
+    },
+    {
+        "docId": "65469d3dcd9a9662437163b5",
+        "category": "DateAndTimings",
+        "status": false,
+        "docData": {
+            "_id": "65469d3dcd9a9662437163b5",
+            "eventId": "654698d8cd9a966243716374",
+            "title": "Date & Timing",
+            "titleBg": "1699125760675-@-home_date2.jpg",
+            "functions": [
+                {
+                    "fnTitle": "Vinayak Stapna",
+                    "location": "Hotal Taj Mahal Palace",
+                    "timing": "11 Feb - 9:00 AM",
+                    "latlng": "",
+                    "fnImg": "1699126386912-@-date_ganesh.jpg",
+                    "mapImg": "1699126397965-@-map_taj.jpg",
+                    "address": "Supreme  Business Park, Apollo Bandar, Colaba, Mumbai, Majarashtra",
+                    "_id": "65469d3dcd9a9662437163b6"
+                },
+                {
+                    "fnTitle": "Mehandi Function",
+                    "location": "Blue Sea Banquets",
+                    "timing": "11 Feb - 12:30 PM",
+                    "latlng": "",
+                    "fnImg": "1699126558505-@-date_mehandi.jpg",
+                    "mapImg": "1699126576284-@-maps_blue.jpg",
+                    "address": "Khan Abdul Gaffar Khan Road, Worli Sea Face, Worli, Mumbi, Maharashtra",
+                    "_id": "65469d3dcd9a9662437163b7"
+                }
+            ],
+            "__v": 0
+        },
+        "_id": "654698f3cd9a96624371637b"
+    },
+    {
+        "docId": "65469f74cd9a9662437163d5",
+        "category": "Gallery",
+        "status": false,
+        "docData": {
+            "basicDetails": {
+                "sliderImgs": [
+                    "1699126878034-@-gallery_1.jpg",
+                    "1699126885514-@-gallery_2.jpg",
+                    "1699126892430-@-gallery_3.jpg",
+                    "",
+                    ""
+                ],
+                "photosBg": "1699126931608-@-gallery_photos.jpg",
+                "videosBg": "1699126941547-@-gallery_video.jpg"
+            },
+            "_id": "65469f74cd9a9662437163d5",
+            "eventId": "654698d8cd9a966243716374",
+            "title": "Gallery",
+            "titleBg": "1699126788555-@-home_gallery.jpg",
+            "photosAlbums": [
+                {
+                    "albumName": "Pre Wedding",
+                    "albumLink": "",
+                    "albumBg": "1699127129451-@-photos_prewedding.jpg",
+                    "_id": "65469f74cd9a9662437163d6"
+                }
+            ],
+            "videosAlbums": [],
+            "__v": 0
+        },
+        "_id": "654698f3cd9a96624371637c"
+    },
+    {
+        "docId": "6546a19dcd9a9662437163e7",
+        "category": "LiveWedding",
+        "status": false,
+        "docData": {
+            "basicDetails": {
+                "weddingTitle": "Live Wedding Shiva Weds Parvati",
+                "channelName": "Shiva Weds Parvati",
+                "hashtags": "#love #forever #wedding-patrika",
+                "description": "Descriptions of marriage....\nShiva -\nInstagram - www.instagram.com/shiva\n\nParvati -\nFacebook - www.facebook.com/parvati",
+                "liveWeddingBg": "1699127629908-@-gallery_4.jpg"
+            },
+            "_id": "6546a19dcd9a9662437163e7",
+            "eventId": "654698d8cd9a966243716374",
+            "title": "Live Wedding",
+            "titleBg": "1699125884615-@-home_live.jpg",
+            "__v": 0
+        },
+        "_id": "654698f3cd9a96624371637d"
+    },
+    {
+        "docId": "6546a286cd9a9662437163f6",
+        "category": "Memories",
+        "status": false,
+        "docData": {
+            "_id": "6546a286cd9a9662437163f6",
+            "eventId": "654698d8cd9a966243716374",
+            "title": "Our Memories",
+            "titleBg": "1699125931832-@-home_journey.jpg",
+            "memories": [
+                {
+                    "memoryName": "Jab We Met",
+                    "memoryDateTime": "Saturday, 11 Nov 2023",
+                    "memoryStory": "It was love at first sight",
+                    "memoryImg": "1699127863274-@-prehome_1.jpg",
+                    "memoryIcon": "1699127871332-@-memory_date.png",
+                    "_id": "6546a2f3cd9a966243716407"
+                },
+                {
+                    "memoryName": "Our First Date",
+                    "memoryDateTime": "Sunday, 12 Nov 2023",
+                    "memoryStory": "We can only imagine consequences, It was an awkward but pleasing moment for both of us.",
+                    "memoryImg": "1699128032459-@-prehome_2.jpg",
+                    "memoryIcon": "1699128044906-@-memory_meet.png",
+                    "_id": "6546a2f3cd9a966243716408"
+                }
+            ],
+            "__v": 0
+        },
+        "_id": "654698f3cd9a96624371637e"
+    },
+    {
+        "docId": "6546a38bcd9a966243716414",
+        "category": "Journeys",
+        "status": false,
+        "docData": {
+            "_id": "6546a38bcd9a966243716414",
+            "eventId": "654698d8cd9a966243716374",
+            "title": "Our Journey",
+            "titleBg": "1699125921179-@-home_memories.png",
+            "journeys": [
+                {
+                    "journeyHeading": "Shiva",
+                    "journeyDetails": "I have always been an achiever.",
+                    "journeyImg": "1699128142790-@-journey_groom.jpg",
+                    "_id": "6546a38bcd9a966243716415"
+                },
+                {
+                    "journeyHeading": "Parvati",
+                    "journeyDetails": "I would describe myself as someone who is caring and intellective.",
+                    "journeyImg": "1699128197764-@-gallery_2.jpg",
+                    "_id": "6546a38bcd9a966243716416"
+                }
+            ],
+            "__v": 0
+        },
+        "_id": "654698f3cd9a96624371637f"
+    },
+    {
+        "docId": "6546a499cd9a96624371642b",
+        "category": "Firms",
+        "status": false,
+        "docData": {
+            "_id": "6546a499cd9a96624371642b",
+            "eventId": "654698d8cd9a966243716374",
+            "title": "Our Firms",
+            "titleBg": "1699128296260-@-home_message.jpg",
+            "firms": [
+                {
+                    "firmTitle": "Royal Handicrafts",
+                    "firmSubtitle": "Manufacturing & Suplier of wooden handicrafts & Furniture Items",
+                    "firmDescription": "we offer a wide range of handmade wooden products.",
+                    "firmPhone": "",
+                    "firmWA": "",
+                    "firmFB": "",
+                    "firmInsta": "",
+                    "firmImg": "1699128350542-@-firm_1.jpg",
+                    "_id": "6546a499cd9a96624371642c"
+                },
+                {
+                    "firmTitle": "Jewel Exports Inc.",
+                    "firmSubtitle": "Connecting global markets through expert sourcing, production, and logistics",
+                    "firmDescription": "Our companies are involved in the sourcing, production, and distribution of goods for export.",
+                    "firmPhone": "",
+                    "firmWA": "",
+                    "firmFB": "",
+                    "firmInsta": "",
+                    "firmImg": "1699128429433-@-firm_2.jpg",
+                    "_id": "6546a499cd9a96624371642d"
+                }
+            ],
+            "__v": 0
+        },
+        "_id": "654698f3cd9a966243716380"
+    }
+]

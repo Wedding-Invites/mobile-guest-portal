@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { BASE_URL } from './endpoints';
+import { BASE_URL } from './constants';
 
 const useFetchData: (url: string, method: "GET" | "POST", body: any) => any = (url, method = 'GET', body) => {
     const [data, setData] = useState(null);

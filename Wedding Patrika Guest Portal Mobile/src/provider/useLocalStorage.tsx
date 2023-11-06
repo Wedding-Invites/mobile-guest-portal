@@ -1,5 +1,5 @@
 import { useState } from "react";
-export const USER_CREDS = "@key-user-creds";
+export const EVENT_CREDS = "@key-user-creds";
 export const EVENT_DATA = "@key-event-data"
 
 
