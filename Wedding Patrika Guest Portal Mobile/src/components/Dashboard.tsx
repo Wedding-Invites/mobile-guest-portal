@@ -5,6 +5,7 @@ import { endpoints } from '../data/constants';
 import { getRemainingDays } from './LoginPage';
 import ReactConfetti from 'react-confetti';
 import useWindowDimensions from '../data/useWindowDimensions';
+import { useNavigate } from 'react-router-dom';
 
 
 function Dashboard() {
@@ -15,6 +16,7 @@ function Dashboard() {
     console.log('Stored EventInfo:', storedEventInfo);
     console.log('Stored EventData:', storedEventData);
     const base_img_url = endpoints.SERVER + '/' + storedEventInfo._id + '/';
+    const navigate = useNavigate();
     return (
         <VStack w='100%' bgColor='black' h='full'>
             <VStack h={height * 0.4} w='100%'>
@@ -34,7 +36,7 @@ function Dashboard() {
                     storedEventData && storedEventData.list && storedEventData.list.length > 0 &&
                     storedEventData.list.map((item: any, i: number) => {
                         return (
-                            <VStack as={Link} mr='2' ml='2' borderRadius='16'>
+                            <VStack as={Link} mr='2' ml='2' borderRadius='16' onClick={() => navigate(item.category)}>
                                 <Center borderRadius='16' position='absolute' w='100%' h={height * 0.25} >
                                     <Text w='100%' h='20%' textAlign='center' color='white' fontWeight='medium'>{item.docData.title}</Text>
                                 </Center>
