@@ -24,6 +24,7 @@
     "react-pageflip": "^2.0.3",
     "react-router-dom": "^6.18.0",
     "react-slideshow-image": "^4.3.0",
+    "react-youtube": "^10.1.0",
     "swiper": "^11.0.4"
   },
   "devDependencies": {

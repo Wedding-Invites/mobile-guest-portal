@@ -10,7 +10,7 @@ import 'swiper/css/effect-cards';
 import './dateTimingStyles.css'
 
 // import required modules
-import { Parallax, EffectCards } from 'swiper/modules';
+import { Parallax, Pagination } from 'swiper/modules';
 import { endpoints } from '../../data/constants';
 import getParsedData from '../../data/getParsedData';
 import useWindowDimensions from '../../data/useWindowDimensions';
@@ -19,6 +19,8 @@ import { Box, Button, Image, Tag, TagLabel, TagLeftIcon, Text, VStack } from '@c
 import { IdentificationBadge, MapPin, Clock } from '@phosphor-icons/react';
 import 'swiper/css/navigation';
 import 'swiper/css';
+import 'swiper/css/pagination'
+
 
 export default function DateTimings() {
     const [storedEventData, setStoredEventData] = useLocalStorage(EVENT_DATA, null);
@@ -45,10 +47,9 @@ export default function DateTimings() {
                     functions.map((item: any, i: number) => {
                         return (
                             <SwiperSlide style={{ width: width, }}>
-                                <Text data-swiper-parallax="-800" mt={-height * 0.065}>{item.fnTitle}</Text>
-                                <Image marginTop={- height * 0.05} scale={0.7} borderWidth="thick" border="4px" borderRadius="2xl" borderColor="white" transform="auto" src={base_img_url + item.fnImg} />
-                                <Image transition="ease-in" data-swiper-parallax="-1" src={base_img_url + item.mapImg} position="absolute" top={height * 0.6} left={0} bottom={0} />
-                                <Box position="absolute" top={height * 0.5} left={0} bottom={0} w={width} minH={height * 0.15} pl="4" bgColor="white">
+                                <Text data-swiper-parallax="-800" >{item.fnTitle}</Text>
+                                <Image marginTop={- height * 0.05} scale={0.75} borderWidth="thick" border="4px" borderRadius="2xl" borderColor="white" transform="auto" src={base_img_url + item.fnImg} />
+                                <Box position="absolute" top={height * 0.55} left={0} bottom={0} w={width} pl="4" bgColor="white">
                                     <Text m="2" ml="7" data-swiper-parallax-y="100" color="black" fontWeight="semibold">{item.location}</Text>
                                     <Tag data-swiper-parallax="-800" bgColor="transparent" >
                                         <TagLeftIcon as={MapPin} color="black" />
@@ -59,6 +60,7 @@ export default function DateTimings() {
                                         <Text fontWeight="normal">{item.timing}</Text>
                                     </Tag>
                                 </Box>
+                                <Image transition="all" data-swiper-parallax-y="-1000" src={base_img_url + item.mapImg} position="absolute" top={height * 0.72} left={0} bottom={0} />
                                 {/* <Button children="Open Map"/> */}
                             </SwiperSlide>
                         )
