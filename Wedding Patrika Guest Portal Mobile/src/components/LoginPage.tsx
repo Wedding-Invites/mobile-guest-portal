@@ -74,7 +74,7 @@ function LoginPage() {
     console.log('Stored EventData:', storedEventData);
 
     const eventDataCollection = (eventData: any) => {
-        toast({ title: 'Event Data Fetched Successfully !', position: 'top' })
+        toast({ title: 'Event Data Fetched Successfully !', position: 'bottom' })
         setStoredEventData(eventData);
         setLoding(false);
         navigate(`dashboard`)
@@ -106,7 +106,7 @@ function LoginPage() {
         }
         else if (checkPinLayout === true) {
             if (inputPin === data.data.eventPasscode) {
-                toast({ title: "PIN MATCHED !!!", position: 'top' });
+                toast({ title: "PIN MATCHED !!!", position: 'bottom' });
                 setStoredEventInfo(data.data);
                 setLoding(true);
                 fetchEventCompleteData(data.data._id, eventDataCollection)

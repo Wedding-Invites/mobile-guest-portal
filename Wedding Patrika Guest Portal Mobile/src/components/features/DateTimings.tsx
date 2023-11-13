@@ -60,7 +60,7 @@ export default function DateTimings() {
                                         <Text fontWeight="normal">{item.timing}</Text>
                                     </Tag>
                                 </Box>
-                                <Image transition="all" data-swiper-parallax-y="-1000" src={base_img_url + item.mapImg} position="absolute" top={height * 0.72} left={0} bottom={0} />
+                                <Image transition="all" data-swiper-parallax-y="-100" src={base_img_url + item.mapImg} position="absolute" top={height * 0.72} left={0} bottom={0} />
                                 {/* <Button children="Open Map"/> */}
                             </SwiperSlide>
                         )

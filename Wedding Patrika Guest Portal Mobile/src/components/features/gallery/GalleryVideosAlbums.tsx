@@ -10,7 +10,7 @@ function GalleryVideosAlbum() {
     const [storedEventData, setStoredEventData] = useLocalStorage(EVENT_DATA, null);
     const base_img_url = endpoints.SERVER + '/' + storedEventData.eventId + '/';
     const galleryData = getParsedData(storedEventData.list, "Gallery");
-    const videosAlbums = galleryData.docData.photosAlbums;
+    const videosAlbums = galleryData.docData.videosAlbums;
     console.log(videosAlbums);
     const { height, width } = useWindowDimensions();
     const navigate = useNavigate();
