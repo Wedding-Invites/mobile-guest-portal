@@ -10,16 +10,19 @@ import 'swiper/css/effect-cards';
 import './dateTimingStyles.css'
 
 // import required modules
-import { Parallax, Pagination } from 'swiper/modules';
+import { Parallax, Pagination, Navigation } from 'swiper/modules';
 import { endpoints } from '../../data/constants';
 import getParsedData from '../../data/getParsedData';
 import useWindowDimensions from '../../data/useWindowDimensions';
 import { useLocalStorage, EVENT_DATA } from '../../provider/useLocalStorage';
-import { Box, Button, Image, Tag, TagLabel, TagLeftIcon, Text, VStack } from '@chakra-ui/react';
-import { IdentificationBadge, MapPin, Clock } from '@phosphor-icons/react';
+import { Box, Button, HStack, IconButton, Image, Tag, TagLabel, TagLeftIcon, Text, VStack } from '@chakra-ui/react';
+import { IdentificationBadge, MapPin, Clock, ArrowLeft, ArrowRight, MapTrifold } from '@phosphor-icons/react';
+import { useSwiper } from 'swiper/react';
 import 'swiper/css/navigation';
 import 'swiper/css';
 import 'swiper/css/pagination'
+import { ArrowLeftIcon } from '@chakra-ui/icons';
+import { useBouncyButton } from '../animated/BouncyButton';
 
 
 export default function DateTimings() {
@@ -30,11 +33,14 @@ export default function DateTimings() {
     console.log(dateTimingData, functions);
     const { height, width } = useWindowDimensions();
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+    const swiper = useSwiper();
+
     return (
         <VStack h={height} bgColor="red" w={width}>
             <Swiper
                 speed={600}
                 parallax={true}
+                // navigation
                 modules={[Parallax]}
                 className="mySwiper"
                 onSlideChange={({ activeIndex }) => setActiveSlideIndex(activeIndex)}
@@ -66,7 +72,24 @@ export default function DateTimings() {
                         )
                     })
                 }
+                <SlidePrevNext />
             </Swiper>
+
         </VStack>
+    );
+}
+function SlidePrevNext() {
+    const swiper = useSwiper();
+    const [style1, handleButtonClick1] = useBouncyButton();
+    const [style2, handleButtonClick2] = useBouncyButton();
+    const [style3, handleButtonClick3] = useBouncyButton();
+
+
+    return (
+        <HStack mb='2' zIndex='modal' position='absolute' bottom={0} right={0} left={0} bgColor='transparent' alignSelf='center' justifyContent='center' >
+            <IconButton style={{ WebkitTapHighlightColor: 'transparent', ...style1 }} _hover={{ bgColor: 'black' }} bgColor='black' color='white' borderRadius='full' aria-label='left' icon={<ArrowLeft weight='bold' />} onClick={() => handleButtonClick1(() => swiper.slidePrev())} />
+            <Button style={{ WebkitTapHighlightColor: 'transparent', ...style2 }} _hover={{ bgColor: 'black' }} children="Open Map" leftIcon={<MapTrifold weight='bold' size={20} />} bgColor='black' color='white' borderRadius='full' fontSize='xs' onClick={() => handleButtonClick2(() => { })} />
+            <IconButton style={{ WebkitTapHighlightColor: 'transparent', ...style3 }} _hover={{ bgColor: 'black' }} bgColor='black' color='white' borderRadius='full' aria-label='right' icon={<ArrowRight weight='bold' />} onClick={() => handleButtonClick3(() => swiper.slideNext())} />
+        </HStack>
     );
 }

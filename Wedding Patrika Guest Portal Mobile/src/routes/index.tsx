@@ -16,6 +16,7 @@ import GalleryPhotosAlbum from "../components/features/gallery/GalleryPhotosAlbu
 import GalleryPhotosDrive from "../components/features/gallery/GalleryPhotosDrive";
 import GalleryVideosAlbums from "../components/features/gallery/GalleryVideosAlbums";
 import GalleryVideosDrive from "../components/features/gallery/GalleryVideosDrive";
+import Aboutus from "../components/features/Aboutus";
 
 
 export default function AppRouter() {
@@ -40,6 +41,7 @@ export default function AppRouter() {
                     <Route path="/:url/dashboard/Memories" element={<Memories />} />
                     <Route path="/:url/dashboard/Journeys" element={<Journey />} />
                     <Route path="/:url/dashboard/Firms" element={<Firms />} />
+                    <Route path="/:url/dashboard/aboutus" element={<Aboutus />} />
                 </Routes>
             </Flex>
             {/* </Center> */}

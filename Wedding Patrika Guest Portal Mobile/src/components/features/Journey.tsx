@@ -15,15 +15,15 @@ function Journey() {
     console.log(journeysList)
     // journeyDetails:"I have always been an achiever."
     // journeyHeading:"Shiva"journeyImg:"1699128142790-@-journey_groom.jpg"_id:"6546a38bcd9a966243716415"
-    const front = <Button w='24'>This is displayed when Foldy is collapsed</Button>;
-    const [open, setOpen] = React.useState<number | null>(null);
-    const { height, width } = useWindowDimensions();
     const onFoldClickHandler = (i: number) => {
         setOpen(i)
     }
+    const front = <Button w='24' onClick={onFoldClickHandler}>This is displayed when Foldy is collapsed</Button>;
+    const [open, setOpen] = React.useState<number | null>(null);
+    const { height, width } = useWindowDimensions();
     const layoutWidth = width * 0.95;
     return (
-        <VStack bgColor='red' alignItems={'center'} mt='4' >
+        <VStack alignItems={'center'} mt='4'  >
             {
                 journeysList.map(
                     (item: any, i: number) => {
@@ -32,26 +32,27 @@ function Journey() {
                                 <Image w={layoutWidth} mx='1' h="32" src={base_img_url + item.journeyImg} />
                             </Box>,
                             open === i ?
-                                <VStack px='4' pt='2' w={layoutWidth} mx='1' onClick={() => setOpen(open === i ? null : i)} >
+                                <VStack h='24' px='4' pt='2' w={layoutWidth} mx='1' onClick={() => setOpen(open === i ? null : i)} >
                                     <Text>{item.journeyHeading}</Text>
                                     <Box h='0.1' w='100%' bgColor='black' />
-                                    <Text>{item.journeyDetails}</Text>
+                                    <Text h='24' height='auto' noOfLines={4} w={layoutWidth * 0.9}>{item.journeyDetails}</Text>
                                 </VStack> : <></>,
-
                             open !== i ?
                                 <Box w={layoutWidth} mx='1' onClick={() => setOpen(open === i ? null : i)} >
                                     <Image h="32" src={base_img_url + item.journeyImg} w={layoutWidth} mx='1' />
                                     <Center onClick={() => setOpen(i)} w={layoutWidth} mx='1' bgColor="blackAlpha.500" position='absolute' top={0} height="32" >
                                         <Text color='white' borderWidth='2px' borderColor='white' px='28' py='4' >{item.journeyHeading}</Text>
                                     </Center>
-                                </Box> : <></>,
+                                </Box> :
+                                <Text h='24' mt='0' p={0} noOfLines={4} w={layoutWidth * 0.9} mx='4' onClick={() => setOpen(open === i ? null : i)}>{item.journeyDetails}</Text>
+                            ,
                         ]
                         return (
                             <Foldy
                                 customClass="foldy"
                                 front={front}
                                 list={list}
-                                duration={1000}
+                                duration={1500}
                                 open={open === i}
                             />
                         )

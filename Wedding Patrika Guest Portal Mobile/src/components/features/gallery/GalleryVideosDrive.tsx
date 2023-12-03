@@ -14,7 +14,7 @@ function GalleryVideosDrive() {
         },
     };
 
-    return <YouTube videoId={params.video_gallery} opts={opts} />;
+    return <YouTube videoId={params.video_gallery} opts={opts} style={{ backgroundColor: 'black',direction:'rtl ' }} />;
 }
 
 export default GalleryVideosDrive

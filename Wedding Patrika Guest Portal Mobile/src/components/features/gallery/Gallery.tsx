@@ -11,6 +11,7 @@ import { Autoplay, EffectFade } from 'swiper/modules';
 import { Box, HStack, Icon, Image, Link, Text, VStack } from '@chakra-ui/react';
 import { Camera, VideoCamera } from '@phosphor-icons/react';
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 export default function Gallery() {
     const [storedEventData, setStoredEventData] = useLocalStorage(EVENT_DATA, null);
@@ -22,6 +23,7 @@ export default function Gallery() {
     console.log(galleryData, sliderImgs);
     const { height, width } = useWindowDimensions();
     const navigate = useNavigate();
+
     return (
         <VStack h={height} width={width} bgColor='white'>
             <Swiper
@@ -30,7 +32,7 @@ export default function Gallery() {
                 // style={{ backgroundColor: 'red' }}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 1500,
+                    delay: 2500,
                     disableOnInteraction: false,
                 }}
                 modules={[Autoplay, EffectFade]}
@@ -51,6 +53,8 @@ export default function Gallery() {
                     })
                 }
             </Swiper>
+
+            {/* <SwitcherView images={sliderImgs.map((item) => base_img_url + item)} /> */}
             <HStack height={height * 0.315} w={width} justifyContent='space-evenly' bgColor='white' alignItems='center'>
                 <Box as={Link} w={width * 0.4} height='auto' alignSelf='center' alignItems='center' justifyContent='center' onClick={() => navigate('photos')}>
                     <VStack position='absolute' mt='3' zIndex='popover' w={width * 0.4} height={height * 0.3} bgColor='blackAlpha.600' borderRadius='md' justifyContent='center' alignItems='center' >

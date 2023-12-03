@@ -10,7 +10,7 @@ function GalleryVideosAlbum() {
     const [storedEventData, setStoredEventData] = useLocalStorage(EVENT_DATA, null);
     const base_img_url = endpoints.SERVER + '/' + storedEventData.eventId + '/';
     const galleryData = getParsedData(storedEventData.list, "Gallery");
-    const videosAlbums = galleryData.docData.videosAlbums;
+    const videosAlbums = galleryData.docData.photosAlbums;
     console.log(videosAlbums);
     const { height, width } = useWindowDimensions();
     const navigate = useNavigate();
@@ -20,7 +20,7 @@ function GalleryVideosAlbum() {
             {
                 videosAlbums.map((item: any, i: number) => {
                     return (
-                        <Flex key={i} as={Link} mx="2" my="1" h={height * 0.25} w={width * 0.95} onClick={() => navigate(item.albumLink)}>
+                        <Flex key={i} as={Link} mx="2" my="1" h={height * 0.25} w={width * 0.95} onClick={() => navigate("LIgiDMcRQX4")}>
                             <Image src={base_img_url + item.albumBg} filter='auto' borderRadius='md' />
                             <VStack bgColor='blackAlpha.500' w={width * 0.95} h={height * 0.25} position='absolute' borderRadius='md' >
                                 <PlayCircle size={52} weight="bold" color='white' style={{ position: 'absolute', marginTop: height * 0.09 }} />
